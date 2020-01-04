@@ -7,14 +7,20 @@ INCI = inc/pathfinder.h
 SRC = main.c\
 	mx_file_to_str.c\
 	mx_split.c\
+	mx_parser.c\
+	mx_atoi.c\
 
 SRCS = $(addprefix src/, main.c\
 	mx_file_to_str.c\
-	mx_split.c)
+	mx_split.c\
+	mx_parser.c\
+	mx_atoi.c)
 
 OBJ = main.o\
 	mx_file_to_str.o\
 	mx_split.o\
+	mx_parser.o\
+	mx_atoi.o\
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
