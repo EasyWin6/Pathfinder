@@ -5,19 +5,18 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
 #include "Libmx/inc/libmx.h"
 
-typedef struct      s_main
-{
+#define MX_INVALID_N_ISLANDS "invalid number of islands"
+
+typedef struct      s_main {
     char**          arr_v;
-    int             arr_v_count;
-    int**           matr_d;
-    int**           matr_a;
-    int             v_count;
+    int             arr_count;
+    int             count;
+    int**           m_dist;
 }                   t_main;
 
 int main(int argc, char *argv[]);
@@ -26,7 +25,8 @@ char *mx_file_to_str(const char *file);
 char **mx_parser(char *s);
 int mx_atoi(const char *str);
 void mx_rec_struct(t_main *stct,char *argv[]);
-
-
+void mx_printerr(const char *c);
+bool mx_isdigit(int c);
+int mx_get_index(t_main *stct, char *c);
 
 #endif

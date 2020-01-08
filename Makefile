@@ -9,18 +9,30 @@ SRC = main.c\
 	mx_split.c\
 	mx_parser.c\
 	mx_atoi.c\
+	mx_printerr.c\
+	mx_rec_struct.c\
+	mx_isdigit.c\
+	mx_get_index.c\
 
 SRCS = $(addprefix src/, main.c\
 	mx_file_to_str.c\
 	mx_split.c\
 	mx_parser.c\
-	mx_atoi.c)
+	mx_atoi.c\
+	mx_printerr.c\
+	mx_rec_struct.c\
+	mx_isdigit.c\
+	mx_get_index.c)
 
 OBJ = main.o\
 	mx_file_to_str.o\
 	mx_split.o\
 	mx_parser.o\
 	mx_atoi.o\
+	mx_printerr.o\
+    mx_rec_struct.o\
+    mx_isdigit.o\
+    mx_get_index.o\
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 

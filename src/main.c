@@ -1,13 +1,15 @@
-#include "Pathfinder.h"
+#include "pathfinder.h"
 
 int main(int argc, char* argv[]) {
     (void)argc;
-    char *str = mx_file_to_str(argv[1]);
-    char **str1 = mx_split(str, '\n');
-    char **line1 = mx_parser(str1[1]);
-    for (int i = 0; line1[i] != NULL; i++) {
-        mx_printstr(line1[i]);
+    t_main stct;
+
+    mx_rec_struct(&stct, argv);
+    for (int i = 0; stct.arr_v[i] != NULL; i++) {
+        mx_printstr(stct.arr_v[i]);
         mx_printstr("\n");
     }
+    int b = mx_get_index(&stct, "b");
+    printf("%d", b);
     return 0;
 }
