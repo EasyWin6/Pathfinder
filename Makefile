@@ -13,6 +13,8 @@ SRC = main.c\
 	mx_rec_struct.c\
 	mx_isdigit.c\
 	mx_get_index.c\
+	mx_m_distance.c\
+	mx_floyd.c
 
 SRCS = $(addprefix src/, main.c\
 	mx_file_to_str.c\
@@ -22,7 +24,9 @@ SRCS = $(addprefix src/, main.c\
 	mx_printerr.c\
 	mx_rec_struct.c\
 	mx_isdigit.c\
-	mx_get_index.c)
+	mx_get_index.c\
+	mx_m_distance.c\
+	mx_floyd.c)
 
 OBJ = main.o\
 	mx_file_to_str.o\
@@ -33,6 +37,8 @@ OBJ = main.o\
     mx_rec_struct.o\
     mx_isdigit.o\
     mx_get_index.o\
+    mx_m_distance.o\
+    mx_floyd.o
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
