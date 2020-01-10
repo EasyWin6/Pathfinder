@@ -9,11 +9,23 @@ void mx_rec_struct(t_main *stct, char *argv[]) {
     char *str = mx_file_to_str(argv[1]);
     char **str1 = mx_split(str, '\n');
 
+    mx_line1_is_invalid(&str[0], str1[0]);
     stct->count = mx_atoi(str1[0]);
     mx_m_distance(stct);
     stct->arr_v = (char **)malloc((stct->count + 1) * sizeof(char *));
     stct->arr_count = 0;
     stct_entry(stct, str1);
+    if (stct->arr_count != stct->count) {
+        mx_printerr(INVALID_NUMBER_ISLANDS);
+        mx_strdel(&str);
+        mx_del_strarr(&str1);
+        exit(1);
+    }
+    /*
+    mx_fill_m_a_struct(m_stct);
+    mx_strdel(&str);
+    mx_del_strarr(&s_str);
+     */
 }
 
 static void stct_entry(t_main *stct, char **str1) {
@@ -45,7 +57,7 @@ static void add_to_arr(t_main *stct, char *temp) {
 
 static void check_point(t_main *stct) {
     if (stct->arr_count >= stct->count) {
-        mx_printerr(MX_INVALID_N_ISLANDS);
+        mx_printerr(INVALID_NUMBER_ISLANDS);
         exit(1);
     }
 }
@@ -60,7 +72,7 @@ static void writing_to_mat(t_main *stct, char **temp) {
     for (int i = 0; i < a; i++) {
         for (int j = 0; j < a; j++) {
             if ((i != j) && (stct->m_dist[i][j] == 0))
-                stct->m_dist[i][j] = MX_MAX;
+                stct->m_dist[i][j] = MAX;
         }
     }
 }

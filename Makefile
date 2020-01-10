@@ -14,7 +14,12 @@ SRC = main.c\
 	mx_isdigit.c\
 	mx_get_index.c\
 	mx_m_distance.c\
-	mx_floyd.c
+	mx_floyd.c\
+	mx_printmatrix.c\
+	mx_line1_is_invalid.c\
+	mx_usage.c\
+	mx_file_does_not_exist.c\
+	mx_file_is_empty.c
 
 SRCS = $(addprefix src/, main.c\
 	mx_file_to_str.c\
@@ -26,7 +31,12 @@ SRCS = $(addprefix src/, main.c\
 	mx_isdigit.c\
 	mx_get_index.c\
 	mx_m_distance.c\
-	mx_floyd.c)
+	mx_floyd.c\
+	mx_printmatrix.c\
+	mx_line1_is_invalid.c\
+	mx_usage.c\
+	mx_file_does_not_exist.c\
+	mx_file_is_empty.c)
 
 OBJ = main.o\
 	mx_file_to_str.o\
@@ -38,7 +48,12 @@ OBJ = main.o\
     mx_isdigit.o\
     mx_get_index.o\
     mx_m_distance.o\
-    mx_floyd.o
+    mx_floyd.o\
+    mx_printmatrix.o\
+    mx_line1_is_invalid.o\
+    mx_usage.o\
+    mx_file_does_not_exist.o\
+    mx_file_is_empty.o
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
