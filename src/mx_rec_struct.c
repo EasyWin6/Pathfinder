@@ -21,11 +21,7 @@ void mx_rec_struct(t_main *stct, char *argv[]) {
         mx_del_strarr(&str1);
         exit(1);
     }
-    /*
-    mx_fill_m_a_struct(m_stct);
-    mx_strdel(&str);
-    mx_del_strarr(&s_str);
-     */
+
 }
 
 static void stct_entry(t_main *stct, char **str1) {
