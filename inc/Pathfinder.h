@@ -21,11 +21,19 @@ typedef struct      s_main {
     int             arr_count;
     int             count;
     int**           m_dist;
+    int**           m_floyd;
 }                   t_main;
+
+typedef struct s_retpath {
+    int        size;
+    int*       path;
+    int        c;
+}              t_retpath;
 
 //Struct
 void mx_rec_struct(t_main *stct,char *argv[]);
 void mx_m_distance(t_main *stct);
+void mx_m_floyd(t_main *stct);
 
 //Other function
 int main(int argc, char *argv[]);

@@ -14,6 +14,7 @@ SRC = main.c\
 	mx_isdigit.c\
 	mx_get_index.c\
 	mx_m_distance.c\
+	mx_m_floyd.c\
 	mx_floyd.c\
 	mx_printmatrix.c\
 	mx_line1_is_invalid.c\
@@ -31,6 +32,7 @@ SRCS = $(addprefix src/, main.c\
 	mx_isdigit.c\
 	mx_get_index.c\
 	mx_m_distance.c\
+	mx_m_floyd.c\
 	mx_floyd.c\
 	mx_printmatrix.c\
 	mx_line1_is_invalid.c\
@@ -48,6 +50,7 @@ OBJ = main.o\
     mx_isdigit.o\
     mx_get_index.o\
     mx_m_distance.o\
+    mx_m_floyd.o\
     mx_floyd.o\
     mx_printmatrix.o\
     mx_line1_is_invalid.o\
