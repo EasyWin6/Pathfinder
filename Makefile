@@ -24,7 +24,8 @@ SRC = main.c\
 	mx_back_path.c\
 	mx_int_print.c\
 	mx_ret_trip_output.c\
-	mx_find_all_paths.c
+	mx_find_all_paths.c\
+	mx_isalpha.c
 
 SRCS = $(addprefix src/, main.c\
 	mx_file_to_str.c\
@@ -46,7 +47,8 @@ SRCS = $(addprefix src/, main.c\
 	mx_back_path.c\
 	mx_int_print.c\
 	mx_ret_trip_output.c\
-	mx_find_all_paths.c)
+	mx_find_all_paths.c\
+	mx_isalpha.c)
 
 OBJ = main.o\
 	mx_file_to_str.o\
@@ -68,7 +70,8 @@ OBJ = main.o\
     mx_back_path.o\
     mx_int_print.o\
     mx_ret_trip_output.o\
-    mx_find_all_paths.o
+    mx_find_all_paths.o\
+    mx_isalpha.o
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
