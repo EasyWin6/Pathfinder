@@ -45,6 +45,10 @@ bool mx_isdigit(int c);
 int mx_get_index(t_main *stct, char *c);
 void mx_floyd(t_main *stct);
 void mx_printmatrix(t_main *stct);
+void mx_back_path(t_main *stct, t_retpath *stack);
+void mx_int_print(int n);
+void mx_ret_trip_output(t_main *stct, t_retpath *stack);
+void mx_find_all_paths(t_main *stct, int st, int end);
 
 //Error function
 void mx_usage(int argc);

@@ -20,7 +20,11 @@ SRC = main.c\
 	mx_line1_is_invalid.c\
 	mx_usage.c\
 	mx_file_does_not_exist.c\
-	mx_file_is_empty.c
+	mx_file_is_empty.c\
+	mx_back_path.c\
+	mx_int_print.c\
+	mx_ret_trip_output.c\
+	mx_find_all_paths.c
 
 SRCS = $(addprefix src/, main.c\
 	mx_file_to_str.c\
@@ -38,7 +42,11 @@ SRCS = $(addprefix src/, main.c\
 	mx_line1_is_invalid.c\
 	mx_usage.c\
 	mx_file_does_not_exist.c\
-	mx_file_is_empty.c)
+	mx_file_is_empty.c\
+	mx_back_path.c\
+	mx_int_print.c\
+	mx_ret_trip_output.c\
+	mx_find_all_paths.c)
 
 OBJ = main.o\
 	mx_file_to_str.o\
@@ -56,7 +64,11 @@ OBJ = main.o\
     mx_line1_is_invalid.o\
     mx_usage.o\
     mx_file_does_not_exist.o\
-    mx_file_is_empty.o
+    mx_file_is_empty.o\
+    mx_back_path.o\
+    mx_int_print.o\
+    mx_ret_trip_output.o\
+    mx_find_all_paths.o
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
