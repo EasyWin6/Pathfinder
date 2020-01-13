@@ -29,6 +29,7 @@ void mx_rec_struct(t_main *stct, char *argv[]) {
 static void stct_entry(t_main *stct, char **str1) {
     char **temp;
 
+    stct->arr_count = 0;
     for (int i = 0; i < stct->count; i++)
         stct->arr_v[i] = NULL;
     for (int j = 1; str1[j]; j++) {
@@ -42,8 +43,8 @@ static void stct_entry(t_main *stct, char **str1) {
 static void add_to_arr(t_main *stct, char *temp) {
     int sup = 0;
 
-    for (int i = 0; stct->arr_v[i] && i < stct->arr_count; i++) {
-        if (mx_strcmp(stct->arr_v[i], temp) == 0)
+    for (int j = 0; stct->arr_v[j] && j < stct->arr_count; j++) {
+        if (mx_strcmp(stct->arr_v[j], temp) == 0)
             sup = -1;
     }
     if (sup == 0) {

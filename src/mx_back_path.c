@@ -1,7 +1,7 @@
 #include "pathfinder.h"
 
 static int get_stack_index(t_retpath *stack);
-static void push_to_stack(t_retpath *stack, int elem);
+static void push_to_stack(t_retpath *path_stack, int elem);
 static int pop_from_stack(t_retpath *stack);
 static bool check_next_v(t_main *stct, t_retpath *stack, int next_v);
 

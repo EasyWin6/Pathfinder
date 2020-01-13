@@ -36,7 +36,7 @@ void mx_m_distance(t_main *stct);
 void mx_m_floyd(t_main *stct);
 
 //Other function
-int main(int argc, char *argv[]);
+//int main(int argc, char *argv[]);
 char **mx_split(const char *s, char c);
 char *mx_file_to_str(const char *file);
 char **mx_parser(char *s, int j);

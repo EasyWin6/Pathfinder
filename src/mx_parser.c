@@ -1,34 +1,34 @@
 #include "pathfinder.h"
 
-static void print_err_line(int t);
+static void print_err_line_n(int j);
 static bool check_name(char *s);
 static bool check_dist(char *s);
 
 char **mx_parser(char *s, int j) {
     int a = mx_get_char_index(s, '-');
     int b = mx_get_char_index(s, ',');
-    int len_s = mx_strlen(s);
-    char **n_str = (char **)malloc(4 * sizeof(char *));
+    int len = mx_strlen(s);
+    char **p_str = (char **)malloc((3 + 1) * sizeof(char *));
 
-    if (a < 0 || b < 0 || len_s < 5)
-        print_err_line(j + 1);
-    n_str[0] = mx_strndup(s, a);
-    n_str[1] = mx_strndup((s + a + 1), (b - a - 1));
-    n_str[2] = mx_strndup((s + b + 1), (len_s - b));
-    n_str[3] = NULL;
-    if (!(check_name(n_str[0])) || !(check_name(n_str[1])) ||
-        !(check_dist(n_str[2])) || (mx_strcmp(n_str[0], n_str[1]) == 0) ||
-        ((mx_strcmp(n_str[0], n_str[1]) != 0) && mx_atoi(n_str[2]) == 0))
+    if (a < 0 || b < 0 || len < 5)
+        print_err_line_n(j + 1);
+    p_str[0] = mx_strndup(s, a);
+    p_str[1] = mx_strndup((s + a + 1), (b - a - 1));
+    p_str[2] = mx_strndup((s + b + 1), (len - b));
+    p_str[3] = NULL;
+    if (!(check_name(p_str[0])) || !(check_name(p_str[1])) ||
+        !(check_dist(p_str[2])) || (mx_strcmp(p_str[0], p_str[1]) == 0) ||
+        ((mx_strcmp(p_str[0], p_str[1]) != 0) && mx_atoi(p_str[2]) == 0))
     {
-        mx_del_strarr(&n_str);
+        mx_del_strarr(&p_str);
         print_err_line_n(j + 1);
     }
-    return n_str;
+    return p_str;
 }
 
-static void print_err_line(int t) {
+static void print_err_line_n(int j) {
     mx_printerr("error: line ");
-    mx_printerr(mx_itoa(t));
+    mx_printerr(mx_itoa(j));
     mx_printerr(" is not valid\n");
     exit(1);
 }
