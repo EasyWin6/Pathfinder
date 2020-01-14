@@ -16,7 +16,9 @@ char **mx_split(const char *s, char c) {
         if (p == 0 && (t[1] != '\0'))
             arr_words[i] = mx_strncpy(mx_strnew(p + 1), t, 1);
         else if (t[1] == '\0')
-            arr_words[i] = NULL;
+           arr_words[i] = NULL;
+        else if (p == -1 && t[0])
+            arr_words[i] = mx_strdup(t);
         else  
             arr_words[i] = mx_strncpy(mx_strnew(p), t, p);
         mx_strdel(&t);
@@ -33,6 +35,8 @@ static int count_lines(const char *s, char c) {
     if (s && c) {
         for (int i = 0; i < len; i++) {
             if (s[i] == c)
+                count++;
+            if (s[i + 1] == '\0')
                 count++;
         }
     }

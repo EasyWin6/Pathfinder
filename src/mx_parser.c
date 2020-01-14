@@ -38,7 +38,7 @@ static bool check_name(char *s) {
 
     if (len_s == 0)
         return 0;
-    for (int i = 0; i < len_s - 1; i++) {
+    for (int i = 0; i < len_s; i++) {
         if (!mx_isalpha(s[i]))
             return 0;
     }
